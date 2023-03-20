@@ -1,0 +1,13 @@
+services:
+  back:
+    image: reders4/repo:weather
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5000:80
+  db:
+    image: postgres:15.2
+    environment:
+      POSTGRES_DB: "Weather"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123654789"
